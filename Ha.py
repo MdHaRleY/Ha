@@ -22,11 +22,11 @@ if input_str == "hello":
         input_str = event.pattern_match.group(1)
         token = input("send yor bot token\n")
         chat_id = input("send your id\n")
-
+        ttext = animation_chars
         animation_chars = [
                 "hello"
             ]
-            url_req = "https://api.telegram.org/bot"+ token +"/sendMessage" + "?chat_id=" + chat_id + "&text=" + animation_chars
+            url_req = "https://api.telegram.org/bot"+ token +"/sendMessage" + "?chat_id=" + chat_id + "&text=" + ttext
             results = requests.get(url_req)
             return results.json
                     RunTshake = open("Tshake", 'w')
